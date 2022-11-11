@@ -128,6 +128,15 @@ const Home = () => {
   ];
   const highlightCardDetailsList = [
     {
+      picture: Highlight1,
+      title: "ENS Linked",
+      type: "ENS Linked",
+      username: "dingaling.eth",
+      transactionAmount: 1.82,
+      time: "2 months",
+      xpGain: 200,
+    },
+    {
       picture: Highlight2,
       title: "Best Flip",
       type: "Sold",

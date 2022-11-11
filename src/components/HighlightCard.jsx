@@ -26,17 +26,6 @@ const typeToColorMap = {
 };
 
 const HighlightCard = ({ highlightCardDetails }) => {
-  //   const highlightCardDetails = {
-  //     picture: { Highlight1 },
-  //     title: "ENS Linked",
-  //     type: "ENS Linked",
-  //     username: "dingaling.eth",
-  //     transactionAmount: 1.82,
-  //     time: "2 months",
-  //     xpGain: 200,
-  //   };
-  console.log("IN HIGHLIGHT CARDS");
-  console.log(highlightCardDetails.picture);
   return (
     <>
       <RootContainer type={highlightCardDetails.type}>
@@ -124,6 +113,7 @@ const RootContainer = styled.div`
   background: #111111;
   padding: 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
 
   ${
     "" /* background: radial-gradient(at top left, rgba(37, 181, 213, 0.1), #111111); */
