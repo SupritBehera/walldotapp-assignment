@@ -4,6 +4,11 @@ import ProfileIcon from "../../assets/images/ProfileIcon.svg";
 import TwitterIcon from "../../assets/images/twitter-icon.svg";
 import GlobeIcon from "../../assets/images/Vectorglobe-final.svg";
 
+import Community1 from "../../assets/images/Rectangle1599.svg";
+import Community2 from "../../assets/images/Rectangle1600.svg";
+import Community3 from "../../assets/images/Rectangle1601.svg";
+import Community4 from "../../assets/images/Rectangle1602.svg";
+
 const LeftPane = () => {
   const user = {
     profileIcon: ProfileIcon,
@@ -17,19 +22,19 @@ const LeftPane = () => {
     commonCommunities: [
       {
         communityId: "123",
-        communityPhoto: "",
+        communityPhoto: Community1,
       },
       {
-        communityId: "123",
-        communityPhoto: "",
+        communityId: "456",
+        communityPhoto: Community2,
       },
       {
-        communityId: "123",
-        communityPhoto: "",
+        communityId: "789",
+        communityPhoto: Community3,
       },
       {
-        communityId: "123",
-        communityPhoto: "",
+        communityId: "239",
+        communityPhoto: Community4,
       },
     ],
     tags: [
@@ -76,19 +81,6 @@ const LeftPane = () => {
             <Subtitle>{`${user.shortDesc}`}</Subtitle>
           </Column>
         </Row>
-        {/* <LevelDiv>{`LVL ${user.level}`}</LevelDiv> */}
-        {/* <div
-          style={{
-            display: "flex",
-            height: 100,
-            width: 100,
-            backgroundColor: "white",
-          }}
-        ></div> */}
-        {/* <TwitterIcon /> */}
-        {/* <TwitterContainer>
-          <TwitterIcon />
-        </TwitterContainer> */}
         <Row margin="10% 0px 0px 0px">
           <TwitterContainer>
             <img src={TwitterIcon} alt="twitter icon" />
@@ -101,6 +93,19 @@ const LeftPane = () => {
         <Row margin="12% 0px 0px 0px">
           <DescriptionText>{`${user.description}`}</DescriptionText>
         </Row>
+        <Column margin="20% 0px 0px 0px">
+          <SubtitleTextFontProps>
+            {`Common Communities (${user.commonCommunities.length})`}
+          </SubtitleTextFontProps>
+          <Row wrap>
+            {user.commonCommunities.length > 0 &&
+              user.commonCommunities.map((community) => (
+                <CommonCommunityContainer>
+                  <img src={community.communityPhoto} />
+                </CommonCommunityContainer>
+              ))}
+          </Row>
+        </Column>
       </RootContainer>
     </>
   );
@@ -123,6 +128,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   margin: ${(props) => (props.margin ? props.margin : 0)};
+  flex-wrap: ${(props) => (props.wrap ? "wrap" : "nowrap")};
 `;
 
 const Column = styled.div`
@@ -200,6 +206,12 @@ const WebsiteContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 5%;
+`;
+
+const CommonCommunityContainer = styled.div`
+  margin-right: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 `;
 
 export default LeftPane;
