@@ -7,6 +7,12 @@ import NFTImage2 from "../assets/images/NFTImage2.svg";
 import NFTImage3 from "../assets/images/NFTImage3.svg";
 import NFTImage4 from "../assets/images/NFTImage4.svg";
 import NFTImage5 from "../assets/images/NFTImage5.svg";
+import Highlight1 from "../assets/images/Highlight1-f.svg";
+import Highlight2 from "../assets/images/Highlight2-f.svg";
+import Highlight3 from "../assets/images/Highlight3-f.svg";
+import Highlight4 from "../assets/images/Highlight4-f.svg";
+import Highlight5 from "../assets/images/Highlight5-f.svg";
+
 import HighlightCard from "../components/HighlightCard";
 
 const Home = () => {
@@ -57,15 +63,54 @@ const Home = () => {
       months: 3,
     },
   ];
+  const highlightCardDetailsList = [
+    {
+      picture: Highlight2,
+      title: "Best Flip",
+      type: "Sold",
+      username: "CryptoPunk #2131",
+      transactionAmount: 98.5,
+      time: "10 days",
+      xpGain: 150,
+    },
+    {
+      picture: Highlight3,
+      title: "Should have...",
+      type: "Mint",
+      username: "Rare Apepe #6974",
+      transactionAmount: 98.5,
+      time: "10 days",
+      xpGain: 200,
+    },
+    {
+      picture: Highlight4,
+      title: "First NFT Bought",
+      type: "Bought",
+      username: "BAYC #7925",
+      transactionAmount: 98.5,
+      time: "2 months",
+      xpGain: 10,
+    },
+    {
+      picture: Highlight5,
+      title: "Paper Handled",
+      type: "Sold",
+      username: "Moonbird #7866",
+      transactionAmount: 98.5,
+      time: "10 days",
+      xpGain: 200,
+    },
+  ];
   return (
     <>
       <RootContainer>
         <LeftPane />
 
         <Column margin="5% 0px 0px 0px">
-          <Row>
-            <HighlightCard />
-            <HighlightCard />
+          <Row margin="0px 0px 4% 0px">
+            {highlightCardDetailsList.map((highlightCardDetails) => (
+              <HighlightCard highlightCardDetails={highlightCardDetails} />
+            ))}
           </Row>
           <Row>
             {nftCardDetailsList.map((nftCardDetails) => (

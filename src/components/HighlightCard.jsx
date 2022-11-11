@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Highlight1 from "../assets/images/Highlight1.svg";
 import EthVector from "../assets/images/EthVector.svg";
 
 // A consistent color scheme, where every type of transaction has a
@@ -12,25 +11,38 @@ const typeToColorMap = {
     textColor: "#4BDFFF",
     gradientColor: "rgba(37, 181, 213, 0.1)",
   },
+  Sold: {
+    textColor: "#FFC148",
+    gradientColor: "rgba(248, 169, 16, 0.1)",
+  },
+  Mint: {
+    textColor: "#44FFC8",
+    gradientColor: "rgba(11, 241, 173, 0.1)",
+  },
+  Bought: {
+    textColor: "#4BDFFF",
+    gradientColor: "rgba(37, 181, 213, 0.1)",
+  },
 };
 
-const HighlightCard = () => {
-  const highlightCardDetails = {
-    picture: { Highlight1 },
-    title: "ENS Linked",
-    type: "ENS Linked",
-    username: "dingaling.eth",
-    transactionAmount: 1.82,
-    time: "2 months",
-    xpGain: 200,
-  };
-
+const HighlightCard = ({ highlightCardDetails }) => {
+  //   const highlightCardDetails = {
+  //     picture: { Highlight1 },
+  //     title: "ENS Linked",
+  //     type: "ENS Linked",
+  //     username: "dingaling.eth",
+  //     transactionAmount: 1.82,
+  //     time: "2 months",
+  //     xpGain: 200,
+  //   };
+  console.log("IN HIGHLIGHT CARDS");
+  console.log(highlightCardDetails.picture);
   return (
     <>
-      <RootContainer type="ENS Linked">
+      <RootContainer type={highlightCardDetails.type}>
         <Column>
           <Row margin="0px 0px 10% 0px">
-            <img src={Highlight1} />
+            <img src={highlightCardDetails.picture} />
             <Column margin="0px 0px 0px 12px">
               <TitleText>{`${highlightCardDetails.type}`}</TitleText>
               <TypeText
@@ -51,7 +63,7 @@ const HighlightCard = () => {
               </Subtitle>
             </BoughtAndFloorContainer>
             <BoughtAndFloorContainer margin="7% 0px 0px 0px">
-              <Subtitle>{highlightCardDetails.time}</Subtitle>
+              <Subtitle>{`${highlightCardDetails.time} ago`}</Subtitle>
               <Subtitle white flexEnd>
                 {highlightCardDetails.xpGain &&
                 highlightCardDetails.xpGain >= 0 ? (
