@@ -106,6 +106,25 @@ const LeftPane = () => {
               ))}
           </Row>
         </Column>
+        <Row margin="10% 0px 0px 0px" wrap>
+          {/* Assuming first two tags of every user are to be highlighted in yellow */}
+          {user.tags
+            .slice(0, 2)
+            .map(
+              (tag) =>
+                tag && (
+                  <TagsContainerHighlighted>{`${tag.tagName} ${tag.tagPercent}%`}</TagsContainerHighlighted>
+                )
+            )}
+          {user.tags
+            .slice(2)
+            .map(
+              (tag) =>
+                tag && (
+                  <TagsContainer>{`${tag.tagName} ${tag.tagPercent}%`}</TagsContainer>
+                )
+            )}
+        </Row>
       </RootContainer>
     </>
   );
@@ -212,6 +231,25 @@ const CommonCommunityContainer = styled.div`
   margin-right: 10px;
   margin-top: 10px;
   flex-wrap: wrap;
+`;
+
+const TagsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a2a2a2;
+  font-size: 0.7rem;
+  border-radius: 40px;
+  padding: 6px 10px 6px 10px;
+  border: 1px solid #1a1a1a;
+  font-family: "Sharp Grotesk Regular";
+  font-weight: 500;
+  margin-right: 5%;
+`;
+
+const TagsContainerHighlighted = styled(TagsContainer)`
+  border-color: #ffc148;
+  color: #ffc148;
 `;
 
 export default LeftPane;
