@@ -44,7 +44,7 @@ const HighlightCard = ({ highlightCardDetails }) => {
           <Row margin="0px 0px 10% 0px">
             <img src={highlightCardDetails.picture} />
             <Column margin="0px 0px 0px 12px">
-              <TitleText>{`${highlightCardDetails.type}`}</TitleText>
+              <TitleText>{`${highlightCardDetails.username}`}</TitleText>
               <TypeText
                 type={highlightCardDetails.type}
               >{`${highlightCardDetails.type}`}</TypeText>
