@@ -69,6 +69,10 @@ const LeftPane = () => {
             <img src={ProfileIcon} alt="profile icon" />
             <LevelDiv>{`LVL ${user.level}`}</LevelDiv>
           </Column>
+          <Column margin="10px" centered>
+            <Title>{`${user.name}`}</Title>
+            <Subtitle>{`${user.shortDesc}`}</Subtitle>
+          </Column>
         </Row>
       </RootContainer>
     </>
@@ -95,6 +99,8 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${(props) => (props.margin ? props.margin : 0)};
+  justify-content: ${(props) => (props.centered ? "center" : "flex-start")};
+  align-items: ${(props) => (props.centered ? "center" : "stretch")};
 `;
 
 const LevelDiv = styled.div`
@@ -109,6 +115,21 @@ const LevelDiv = styled.div`
   font-size: 0.8rem;
   color: #ffc148;
   margin-top: 9px;
+`;
+const Title = styled.div`
+  font-family: "Sharp Grotesk Regular";
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: white;
+`;
+
+const Subtitle = styled.div`
+  font-family: "Sharp Grotesk Regular";
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #a2a2a2;
+  align-self: flex-start;
+  margin-top: 10px;
 `;
 
 export default LeftPane;

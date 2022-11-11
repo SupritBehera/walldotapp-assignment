@@ -21,3 +21,15 @@ code {
     url("./fonts/SharpGrotesk/SharpGrotesk-SemiBold25.otf") format("truetype");
   font-weight: 600;
 }
+@font-face {
+  font-family: "Sharp Grotesk Regular";
+  src: local("SharpGrotesk"),
+    url("./fonts/SharpGrotesk/SharpGrotesk-Medium20.otf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Sharp Grotesk Regular 5";
+  src: local("SharpGrotesk"),
+    url("./fonts/SharpGrotesk/SharpGrotesk-Black05.otf") format("truetype");
+  font-weight: 400;
+}

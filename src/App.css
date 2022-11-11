@@ -38,5 +38,6 @@
 }
 
 .font-face-gm {
-  font-family: "Sharp Grotesk";
+  font-family: "Sharp Grotesk", "Gharp Grotesk Regular",
+    "Gharp Grotesk Regular 5";
 }
