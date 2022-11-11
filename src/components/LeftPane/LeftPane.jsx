@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ProfileIcon from "../../assets/images/ProfileIcon.svg";
 import TwitterIcon from "../../assets/images/twitter-icon.svg";
 import GlobeIcon from "../../assets/images/Vectorglobe-final.svg";
+import Chevron from "../../assets/images/Chevron.svg";
 
 import Community1 from "../../assets/images/Rectangle1599.svg";
 import Community2 from "../../assets/images/Rectangle1600.svg";
@@ -125,6 +126,12 @@ const LeftPane = () => {
                 )
             )}
         </Row>
+        <SubscribeButtonContainer>
+          <Row>
+            <span>Subscribe</span>
+            <img src={Chevron} />
+          </Row>
+        </SubscribeButtonContainer>
       </RootContainer>
     </>
   );
@@ -250,6 +257,19 @@ const TagsContainer = styled.div`
 const TagsContainerHighlighted = styled(TagsContainer)`
   border-color: #ffc148;
   color: #ffc148;
+`;
+
+const SubscribeButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a2a2a2;
+  border: 1px solid #a2a2a2;
+  border-radius: 16px;
+  font-family: "Sharp Grotesk Regular";
+  padding: 10px;
+  margin-top: 15%;
+  margin-right: 6%;
 `;
 
 export default LeftPane;
