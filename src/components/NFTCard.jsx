@@ -4,16 +4,16 @@ import EthVector from "../assets/images/EthVector.svg";
 
 import NFTImage1 from "../assets/images/NFTImage.svg";
 
-const NFTCard = () => {
-  const nftCardDetails = {
-    name: "Azuki",
-    id: "9839",
-    bought: "02.82",
-    floor: "12.74",
-    percentChange: 21.6,
-    profilePicture: NFTImage1,
-    months: 3,
-  };
+const NFTCard = ({ nftCardDetails }) => {
+  // const nftCardDetails = {
+  //   name: "Azuki",
+  //   id: "9839",
+  //   bought: "02.82",
+  //   floor: "12.74",
+  //   percentChange: 21.6,
+  //   profilePicture: NFTImage1,
+  //   months: 3,
+  // };
   return (
     <>
       <RootContainer>
@@ -67,7 +67,8 @@ const RootContainer = styled.div`
   border-radius: 8px;
   padding: 4px 4px 8px 4px;
   background-color: #111111;
-  margin-top: 35%;
+  margin-right: 20px;
+  margin-top: 10px;
 `;
 
 const Title = styled.div`
