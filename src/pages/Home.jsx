@@ -61,8 +61,12 @@ const Home = () => {
     <>
       <RootContainer>
         <LeftPane />
-        <HighlightCard />
+
         <Column margin="5% 0px 0px 0px">
+          <Row>
+            <HighlightCard />
+            <HighlightCard />
+          </Row>
           <Row>
             {nftCardDetailsList.map((nftCardDetails) => (
               <NFTCard nftCardDetails={nftCardDetails} />

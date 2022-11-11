@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Highlight1 from "../assets/images/Highlight1.svg";
 import EthVector from "../assets/images/EthVector.svg";
 
+// A consistent color scheme, where every type of transaction has a
+// fixed color. For every type of transaction, we have a textColor, which
+// is the color of the transaction text and gradientColor, which is the color
+// of the radial gradient on the card
 const typeToColorMap = {
   "ENS Linked": {
     textColor: "#4BDFFF",
@@ -103,11 +107,11 @@ const Row = styled(Column)`
 
 const RootContainer = styled.div`
   height: 118px;
-  width: 231px;
+  width: 201px;
   border-radius: 16px;
   background: #111111;
   padding: 10px;
-  margin: 50px;
+  margin-right: 10px;
 
   ${
     "" /* background: radial-gradient(at top left, rgba(37, 181, 213, 0.1), #111111); */
