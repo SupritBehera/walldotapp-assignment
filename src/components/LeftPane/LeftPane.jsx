@@ -83,11 +83,11 @@ const LeftPane = () => {
           </Column>
         </Row>
         <Row margin="10% 0px 0px 0px">
-          <TwitterContainer>
+          <TwitterContainer href="https://twitter.com/walldotapp">
             <img src={TwitterIcon} alt="twitter icon" />
             <TwitterHandle>{`@${user.twitterHandle}`}</TwitterHandle>
           </TwitterContainer>
-          <WebsiteContainer>
+          <WebsiteContainer href="https://www.wall.app/">
             <img src={GlobeIcon} alt="twitter icon" />
           </WebsiteContainer>
         </Row>
@@ -196,7 +196,7 @@ const Subtitle = styled.div`
   margin-top: 10px;
 `;
 
-const TwitterContainer = styled.div`
+const TwitterContainer = styled.a`
   background-color: #1a1a1a;
   border-radius: 24px;
   display: flex;
@@ -206,6 +206,7 @@ const TwitterContainer = styled.div`
   color: #a2a2a2;
   font-size: 0.8rem;
   padding: 4px 8px 4px 8px;
+  text-decoration: none;
 `;
 
 const SubtitleTextFontProps = styled.div`
@@ -224,7 +225,7 @@ const DescriptionText = styled(SubtitleTextFontProps)`
   padding-right: 10%;
 `;
 
-const WebsiteContainer = styled.div`
+const WebsiteContainer = styled.a`
   border-radius: 24px;
   background-color: #1a1a1a;
   padding: 4px;
@@ -270,6 +271,10 @@ const SubscribeButtonContainer = styled.div`
   padding: 10px;
   margin-top: 15%;
   margin-right: 6%;
+  cursor: pointer;
+  &:hover {
+    border-color: #ffc148;
+  }
 `;
 
 export default LeftPane;
